@@ -1,0 +1,59 @@
+.md-sidemenu .md-button {
+    height: 48px;
+    margin: 0;
+    padding: 0 16px;
+    text-align: left;
+    text-transform: none;
+}
+
+.md-sidemenu-caption {
+    height: 36px;
+    padding: 8px 16px;
+    font-size: .75em;
+}
+
+.md-sidemenu-link .md-button {
+    display: flex;
+    align-items: center;
+}
+
+.md-sidemenu-toggle md-icon {
+    transition: .4s transform @material-timing;
+}
+
+.md-sidemenu-content {
+    min-height: 48px;
+    overflow: hidden;
+}
+
+.md-sidemenu-content .md-sidemenu-link .md-button {
+    padding-left: 32px;
+    font-weight: 400;
+}
+
+.md-sidemenu-toggle {
+    background-color: #fff !important;
+    position: relative;
+    z-index: 1;
+    transition: .5s background-color @material-timing;
+}
+
+.md-sidemenu-toggle.md-active {
+    background-color: #eaeaea !important;
+}
+
+.md-sidemenu-toggle.md-active md-icon {
+    transform: rotate(180deg) translateZ(0);
+}
+
+.md-sidemenu-wrapper {
+    margin-top: -100%;
+    overflow: hidden;
+    transition: .4s @material-timing;
+    transition-property: margin-top, background-color;
+}
+
+.md-sidemenu-wrapper.md-active {
+    background-color: #eaeaea;
+    transition-duration: .8s;
+}
