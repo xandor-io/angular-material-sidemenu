@@ -28,18 +28,7 @@
                         'layout-fill': '',
                         'layout-align': 'start start'
                     })
-                    .addClass('md-sidemenu-group')
-                    .append($compile('<md-divider layout-fill />')($scope));
-            }
-        };
-    });
-
-    ngMaterialSidemenu.directive('mdSidemenuCaption', function() {
-        return {
-            link: function($scope, element, attributes) {
-                element
-                    .attr('layout-fill', '')
-                    .addClass('md-sidemenu-caption md-caption');
+                    .addClass('md-sidemenu-group');
             }
         };
     });
