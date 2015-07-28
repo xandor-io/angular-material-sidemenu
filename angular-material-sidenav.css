@@ -39,10 +39,6 @@
     transition: .5s background-color cubic-bezier(.25, .8, .25, 1);
 }
 
-.md-sidemenu-toggle.md-active {
-    background-color: #eaeaea !important;
-}
-
 .md-sidemenu-toggle.md-active md-icon {
     transform: rotate(180deg) translateZ(0);
 }
@@ -55,7 +51,6 @@
 }
 
 .md-sidemenu-wrapper.md-active {
-    background-color: #eaeaea;
     transition-duration: .8s;
 }
 
