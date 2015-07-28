@@ -6,10 +6,10 @@
     text-transform: none;
 }
 
-.md-sidemenu-caption {
-    height: 36px;
-    padding: 8px 16px;
-    font-size: .75em;
+.md-sidemenu .md-subheader {
+    height: 48px;
+    display: flex;
+    align-items: center;
 }
 
 .md-sidemenu-link .md-button {
