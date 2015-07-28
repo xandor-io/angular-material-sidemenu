@@ -24,7 +24,7 @@
 }
 
 .md-sidemenu-toggle md-icon {
-    transition: .4s transform @material-timing;
+    transition: .4s transform cubic-bezier(.25, .8, .25, 1);
 }
 
 .md-sidemenu-content {
@@ -36,7 +36,7 @@
     background-color: #fff !important;
     position: relative;
     z-index: 1;
-    transition: .5s background-color @material-timing;
+    transition: .5s background-color cubic-bezier(.25, .8, .25, 1);
 }
 
 .md-sidemenu-toggle.md-active {
@@ -50,7 +50,7 @@
 .md-sidemenu-wrapper {
     margin-top: -100%;
     overflow: hidden;
-    transition: .4s @material-timing;
+    transition: .4s cubic-bezier(.25, .8, .25, 1);
     transition-property: margin-top, background-color;
 }
 
