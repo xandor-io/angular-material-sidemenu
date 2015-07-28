@@ -1,0 +1,11 @@
+node_modules
+bower_components
+.npm-debug
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+$RECYCLE.BIN/
