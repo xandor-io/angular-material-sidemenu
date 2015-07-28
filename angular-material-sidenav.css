@@ -2,6 +2,7 @@
     height: 48px;
     margin: 0;
     padding: 0 16px;
+    border-radius: 0;
     text-align: left;
     text-transform: none;
 }
