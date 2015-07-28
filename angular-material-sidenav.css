@@ -58,3 +58,12 @@
     background-color: #eaeaea;
     transition-duration: .8s;
 }
+
+.md-sidemenu md-divider {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.md-sidemenu md-divider + .md-subheader {
+    margin-top: -8px;
+}
