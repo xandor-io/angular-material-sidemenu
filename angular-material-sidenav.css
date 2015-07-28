@@ -18,6 +18,11 @@
     align-items: center;
 }
 
+.md-sidemenu-link md-icon:first-child {
+    max-width: 24px;
+    margin-right: 32px;
+}
+
 .md-sidemenu-toggle md-icon {
     transition: .4s transform @material-timing;
 }
@@ -25,11 +30,6 @@
 .md-sidemenu-content {
     min-height: 48px;
     overflow: hidden;
-}
-
-.md-sidemenu-content .md-sidemenu-link .md-button {
-    padding-left: 32px;
-    font-weight: 400;
 }
 
 .md-sidemenu-toggle {
