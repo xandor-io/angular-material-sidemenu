@@ -7,7 +7,7 @@
 
     ngMaterialSidemenu.directive('mdSidemenu', function() {
         return {
-            link: function($scope, element, attributes) {
+            compile: function($scope, element, attributes) {
                 element
                     .attr({
                         'flex': '',
@@ -21,7 +21,7 @@
 
     ngMaterialSidemenu.directive('mdSidemenuGroup', function($compile) {
         return {
-            link: function($scope, element, attributes) {
+            compile: function($scope, element, attributes) {
                 element
                     .attr({
                         'layout': 'column',
@@ -42,7 +42,7 @@
             },
             transclude: true,
             template: '<md-button class="md-sidemenu-toggle" ng-if="mdHeading" ng-class="{\'md-active\': isActive}"><div layout="row"><span flex>{{mdHeading}}</span> <md-icon md-font-icon="material-icons" ng-if="mdArrow">keyboard_arrow_down</md-icon></div></md-button> <div class="md-sidemenu-wrapper" ng-class="{\'md-active\': isActive}" layout="column" ng-transclude></div>',
-            link: function($scope, element, attributes) {
+            compile: function($scope, element, attributes) {
                 element
                     .attr({
                         'layout-fill': '',
@@ -65,7 +65,7 @@
             },
             transclude: true,
             template: '<md-button ng-attr-href="{{href}}" ng-attr-target="{{target}}"><div ng-transclude></div></md-button>',
-            link: function($scope, element, attributes) {
+            compile: function($scope, element, attributes) {
                 element
                     .attr({
                         'layout': 'column',
