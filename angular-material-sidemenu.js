@@ -8,9 +8,10 @@
     ngMaterialSidemenu.directive('mdSidemenu', function() {
         return {
             compile: function($scope, element) {
-                element[0].classList.add('flex');
-                element[0].classList.add('layout-column');
-                element[0].classList.add('layout-align-start-start');
+                element.$$element[0].classList.add('md-sidemenu');
+                element.$$element[0].classList.add('flex');
+                element.$$element[0].classList.add('layout-column');
+                element.$$element[0].classList.add('layout-align-start-start');
             }
         };
     });
@@ -18,10 +19,10 @@
     ngMaterialSidemenu.directive('mdSidemenuGroup', function($compile) {
         return {
             compile: function($scope, element) {
-                element[0].classList.add('md-sidemenu-group');
-                element[0].classList.add('layout-column');
-                element[0].classList.add('layout-fill');
-                element[0].classList.add('layout-align-start-start');
+                element.$$element[0].classList.add('md-sidemenu-group');
+                element.$$element[0].classList.add('layout-column');
+                element.$$element[0].classList.add('layout-fill');
+                element.$$element[0].classList.add('layout-align-start-start');
             }
         };
     });
@@ -34,11 +35,27 @@
                 mdArrow: '='
             },
             transclude: true,
-            template: '<md-button class="md-sidemenu-toggle" ng-if="mdHeading" ng-class="{\'md-active\': isActive}"><div layout="row"><span flex>{{mdHeading}}</span> <md-icon md-font-icon="material-icons" ng-if="mdArrow">keyboard_arrow_down</md-icon></div></md-button> <div class="md-sidemenu-wrapper" ng-class="{\'md-active\': isActive}" layout="column" ng-transclude></div>',
-            compile: function($scope, element) {
+            template: '<md-button class="md-sidemenu-toggle" ng-if="mdHeading" ng-click="isActive = !isActive;" ng-class="{\'md-active\': isActive}"><div layout="row"><span flex>{{mdHeading}}</span> <md-icon class="material-icons" ng-if="mdArrow">keyboard_arrow_down</md-icon></div></md-button> <div class="md-sidemenu-wrapper" ng-class="{\'md-active\': isActive}" layout="column" ng-transclude></div>',
+            link: function($scope, element, attributes) {
+                var $wrapper = element.children('.md-sidemenu-wrapper');
+
                 element[0].classList.add('md-sidemenu-content');
                 element[0].classList.add('layout-column');
                 element[0].classList.add('layout-fill');
+
+                element.on('click', function() {
+                    $scope.isActive = !$scope.isActive;
+
+                    if (parseInt($wrapper.css('margin-top'), 10) === 0) {
+                        $wrapper.css('margin-top', -$wrapper[0].offsetHeight + 'px');
+                    } else {
+                        $wrapper.css('margin-top', 0);
+                    }
+                });
+
+                $timeout(function() {
+                    $wrapper.css('margin-top', '-100%');
+                });
             },
             controller: function($scope) {
                 $scope.isActive = false;
@@ -50,15 +67,16 @@
         return {
             restrict: 'EA',
             scope: {
+                uiSref: '@',
                 href: '@',
                 target: '@'
             },
             transclude: true,
-            template: '<md-button ng-attr-href="{{href}}" ng-attr-target="{{target}}"><div ng-transclude></div></md-button>',
+            template: '<md-button ng-attr-href="{{href}}" ng-attr-uiSref="{{uiSref}}" ng-attr-target="{{target}}"><div ng-transclude></div></md-button>',
             compile: function($scope, element) {
-                element[0].classList.add('md-sidemenu-link');
-                element[0].classList.add('layout-column');
-                element[0].classList.add('layout-fill');
+                element.$$element[0].classList.add('md-sidemenu-link');
+                element.$$element[0].classList.add('layout-column');
+                element.$$element[0].classList.add('layout-fill');
             }
         };
     });
