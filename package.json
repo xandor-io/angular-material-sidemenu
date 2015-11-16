@@ -9,7 +9,7 @@
     "Marcos Moura <marcosvmmoura@gmail.com>"
   ],
   "description": "A simple sidemenu for Angular Material",
-  "main": ["angular-material-sidemenu.js", "angular-material-sidemenu.css"],
+  "main": "[\"angular-material-sidemenu.js\", \"angular-material-sidemenu.css\"]",
   "keywords": [
     "Angular",
     "Angular",
