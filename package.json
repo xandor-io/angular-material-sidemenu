@@ -1,6 +1,6 @@
 {
   "name": "angular-material-sidemenu",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcosmoura/angular-material-sidemenu.git"
@@ -26,7 +26,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.7",
+    "angular": "~1.4.8",
     "angular-material": "~0.11.4"
   }
 }
