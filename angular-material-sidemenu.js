@@ -8,15 +8,16 @@
     sidemenuContent: [
       '<md-button class="md-sidemenu-toggle" ng-if="mdHeading" ng-click="changeWrapperState();" ng-class="{ \'md-active\': isActive }">',
         '<div layout="row">',
+          '<md-icon class="material-icons" ng-if="mdIcon">{{ mdIcon }}</md-icon>',
           '<span flex>{{ mdHeading }}</span>',
           '<md-icon class="material-icons" ng-if="mdArrow">keyboard_arrow_down</md-icon>',
         '</div>',
       '</md-button>',
-      '<div class="md-sidemenu-wrapper" md-sidemenu-disable-animate ng-class="{ \'md-active\': isActive }" layout="column" ng-transclude></div>'
+      '<div class="md-sidemenu-wrapper" md-sidemenu-disable-animate ng-class="{ \'md-active\': isActive, \'md-sidemenu-wrapper-icons\':  mdIcon }" layout="column" ng-transclude></div>'
     ].join(''),
     sidemenuLink: [
       '<md-button ng-attr-href="{{ sidemenuLink.href }}" ng-attr-uiSref="{{ sidemenuLink.uiSref }}" ng-attr-target="{{ sidemenuLink.target }}">',
-        '<div ng-transclude></div>',
+        '<div class="layout-row" ng-transclude></div>',
       '</md-button>'
     ].join('')
   };
@@ -53,6 +54,7 @@
     return {
       restrict: 'EA',
       scope: {
+        mdIcon: '@',
         mdHeading: '@',
         mdArrow: '='
       },

@@ -32,7 +32,10 @@
 .md-sidemenu-link md-icon:first-child {
   max-width: 24px;
   margin-right: 32px;
-  margin-left: -16px;
+}
+
+.md-sidemenu-link span {
+  flex: 1;
 }
 
 .md-sidemenu-toggle md-icon {
@@ -64,7 +67,12 @@
   align-items: center;
 }
 
-.md-sidemenu-toggle.md-active md-icon {
+.md-sidemenu-toggle md-icon:first-child {
+  max-width: 24px;
+  margin-right: 32px;
+}
+
+.md-sidemenu-toggle.md-active md-icon:last-child {
   transform: rotate(180deg) translateZ(0);
 }
 
@@ -77,6 +85,10 @@
 
 .md-sidemenu-wrapper .md-sidemenu-link .md-button {
   padding-left: 32px;
+}
+
+.md-sidemenu-wrapper.md-sidemenu-wrapper-icons .md-sidemenu-link .md-button {
+  padding-left: 72px;
 }
 
 .md-sidemenu md-divider {
