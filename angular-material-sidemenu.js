@@ -22,11 +22,11 @@
     ].join('')
   };
 
-  ngMaterialSidemenu.directive('mdSidemenuDisableAnimate', function($animate) {
-    return function($scope, element) {
-      $animate.enabled(element, false);
-    };
-  });
+  ngMaterialSidemenu.directive('mdSidemenuDisableAnimate', ['$animate', function($animate) {
+      return function($scope, element) {
+        $animate.enabled(element, false);
+      };
+    }]);
 
   ngMaterialSidemenu.directive('mdSidemenu', function() {
     return {
@@ -39,53 +39,53 @@
     };
   });
 
-  ngMaterialSidemenu.directive('mdSidemenuGroup', function($compile) {
-    return {
-      compile: function($scope, element) {
-        element.$$element[0].classList.add('md-sidemenu-group');
-        element.$$element[0].classList.add('layout-column');
-        element.$$element[0].classList.add('layout-fill');
-        element.$$element[0].classList.add('layout-align-start-start');
-      }
-    };
-  });
+  ngMaterialSidemenu.directive('mdSidemenuGroup', ['$compile', function($compile) {
+      return {
+        compile: function($scope, element) {
+          element.$$element[0].classList.add('md-sidemenu-group');
+          element.$$element[0].classList.add('layout-column');
+          element.$$element[0].classList.add('layout-fill');
+          element.$$element[0].classList.add('layout-align-start-start');
+        }
+      };
+    }]);
 
-  ngMaterialSidemenu.directive('mdSidemenuContent', function($timeout) {
-    return {
-      restrict: 'EA',
-      scope: {
-        mdIcon: '@',
-        mdHeading: '@',
-        mdArrow: '='
-      },
-      controllerAs: 'sidemenuContent',
-      transclude: true,
-      template: templates.sidemenuContent,
-      link: function($scope, element, attributes) {
-        var $wrapper = element.children('.md-sidemenu-wrapper');
+  ngMaterialSidemenu.directive('mdSidemenuContent', ['$timeout', function($timeout) {
+      return {
+        restrict: 'EA',
+        scope: {
+          mdIcon: '@',
+          mdHeading: '@',
+          mdArrow: '='
+        },
+        controllerAs: 'sidemenuContent',
+        transclude: true,
+        template: templates.sidemenuContent,
+        link: function($scope, element, attributes) {
+          var $wrapper = element.children('.md-sidemenu-wrapper');
 
-        element[0].classList.add('md-sidemenu-content');
-        element[0].classList.add('layout-column');
-        element[0].classList.add('layout-fill');
+          element[0].classList.add('md-sidemenu-content');
+          element[0].classList.add('layout-column');
+          element[0].classList.add('layout-fill');
 
-        $timeout(function() {
-          $wrapper.css('margin-top', '-100%');
-        });
+          $timeout(function() {
+            $wrapper.css('margin-top', '-100%');
+          });
 
-        $scope.isActive = false;
+          $scope.isActive = false;
 
-        $scope.changeWrapperState = function() {
-          $scope.isActive = !$scope.isActive;
+          $scope.changeWrapperState = function() {
+            $scope.isActive = !$scope.isActive;
 
-          if (parseInt($wrapper.css('margin-top'), 10) === 0) {
-            $wrapper.css('margin-top', -$wrapper[0].offsetHeight + 'px');
-          } else {
-            $wrapper.css('margin-top', 0);
-          }
-        };
-      }
-    };
-  });
+            if (parseInt($wrapper.css('margin-top'), 10) === 0) {
+              $wrapper.css('margin-top', -$wrapper[0].offsetHeight + 'px');
+            } else {
+              $wrapper.css('margin-top', 0);
+            }
+          };
+        }
+      };
+    }]);
 
   ngMaterialSidemenu.directive('mdSidemenuLink', function() {
     return {
