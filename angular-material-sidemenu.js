@@ -44,7 +44,6 @@
         compile: function($scope, element) {
           element.$$element[0].classList.add('md-sidemenu-group');
           element.$$element[0].classList.add('layout-column');
-          element.$$element[0].classList.add('layout-fill');
           element.$$element[0].classList.add('layout-align-start-start');
         }
       };
@@ -66,7 +65,6 @@
 
           element[0].classList.add('md-sidemenu-content');
           element[0].classList.add('layout-column');
-          element[0].classList.add('layout-fill');
 
           $timeout(function() {
             $wrapper.css('margin-top', '-100%');
