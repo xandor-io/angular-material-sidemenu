@@ -24,7 +24,6 @@ To use the sidemenu you can add the following markup:
       <md-sidemenu-button href="#">Submenu 3</md-sidemenu-button>
     </md-sidemenu-content>
   </md-sidemenu-group>
-
   <md-sidemenu-group>
     <md-divider></md-divider>
 
