@@ -14,21 +14,25 @@ This package can be installed using npm and bower:
 ## Usage
 
 To use the sidemenu you can add the following markup:
-```<md-sidemenu locked="true">
+`<md-sidemenu locked="true">
   <md-sidemenu-group>
     <md-subheader class="md-no-sticky">Caption</md-subheader>
+
     <md-sidemenu-content md-icon="home" md-heading="Menu 1" md-arrow="true">
       <md-sidemenu-button href="#">Submenu 1</md-sidemenu-button>
       <md-sidemenu-button href="#">Submenu 2</md-sidemenu-button>
       <md-sidemenu-button href="#">Submenu 3</md-sidemenu-button>
     </md-sidemenu-content>
   </md-sidemenu-group>
+  
   <md-sidemenu-group>
     <md-divider></md-divider>
+
     <md-subheader class="md-no-sticky">Caption</md-subheader>
+
     <md-sidemenu-button href="#">Menu 4</md-sidemenu-button>
   </md-sidemenu-group>
-</md-sidemenu>```
+</md-sidemenu>`
 
 The `<md-sidemenu>` is the main directive to hold all navigation items.
 
