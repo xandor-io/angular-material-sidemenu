@@ -34,8 +34,11 @@ To use the sidemenu you can add the following markup:
 </md-sidemenu>`
 
 The `<md-sidemenu>` is the main directive to hold all navigation items.
+
 The `<md-sidemenu-group>` is needed to create groups of content.
-The `<md-sidemenu-content>` define the collapsible navigation element and theres some attributes to setup. The `md-icon` add an icon before the `md-heading` and the `md-arrow` add an arrow after the heading
+
+The `<md-sidemenu-content>` define the collapsible navigation element and theres some attributes to setup. The `md-icon` add an icon before the `md-heading` and the `md-arrow` add an arrow after the heading.
+
 The `<md-sidemenu-button>` add the buttons inside the navigation.
 
 Pretty easy!
