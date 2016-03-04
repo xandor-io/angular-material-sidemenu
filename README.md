@@ -13,7 +13,9 @@ This package can be installed using npm and bower:
 
 ## Usage
 
-To use the sidemenu you can add the following markup:
+Include the file in you html and add `ngMaterialSidemenu` in you module. Also this module has support for browserify.
+
+After that you can add the following markup:
 ```html
 <md-sidemenu locked="true">
   <md-sidemenu-group>
