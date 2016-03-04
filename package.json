@@ -17,7 +17,7 @@
     "Navigation",
     "Sidemenu"
   ],
-  "main": "dest/angular-material-sidemenu.js",
+  "main": "index.js",
   "devDependencies": {
 
   },
