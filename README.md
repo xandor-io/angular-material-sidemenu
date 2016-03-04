@@ -13,7 +13,12 @@ This package can be installed using npm and bower:
 
 ## Usage
 
-Include the file in you html and add `ngMaterialSidemenu` in you module. Also this module has support for browserify.
+Include the script and css files in you html and add `ngMaterialSidemenu` in you module. Also this module has support for browserify.
+
+```html
+<link rel="stylesheet" href="path/to/angular-material-sidemenu.css">
+<script src="path/to/angular-material-sidemenu.js"></script>
+```
 
 After that you can add the following markup:
 ```html
