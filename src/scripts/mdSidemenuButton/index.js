@@ -7,6 +7,7 @@ let directive = () => {
     restrict: 'E',
     scope: {
       uiSref: '@?',
+      uiSrefActive: '@?',
       href: '@?',
       target: '@?'
     },
