@@ -8,6 +8,7 @@ let directive = () => {
     scope: {
       heading: '@mdHeading',
       icon: '@?mdIcon',
+      svg-icon: '@?mdSvgIcon',
       arrow: '@?mdArrow'
     },
     replace: true,
