@@ -2,3 +2,13 @@ body {
   background-color: #eee;
   font-family: RobotoDraft, Roboto, sans-serif;
 }
+
+.main-header {
+  position: relative;
+  z-index: 2;
+}
+
+.main-sidenav {
+  position: relative;
+  z-index: 1;
+}
