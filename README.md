@@ -20,6 +20,12 @@ Include the script and css files in you html and add `ngMaterialSidemenu` in you
 <script src="path/to/angular-material-sidemenu.js"></script>
 ```
 
+To use icons with ligatures you should include the reference for the Material Icons:
+
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
+
 After that you can add the following markup:
 ```html
 <md-sidemenu locked="true">
@@ -47,7 +53,7 @@ The `<md-sidemenu>` is the main directive to hold all navigation items.
 
 The `<md-sidemenu-group>` is needed to create groups of content.
 
-The `<md-sidemenu-content>` define the collapsible navigation element and theres some attributes to setup. The `md-icon` add an icon before the `md-heading` and the `md-arrow` add an arrow after the heading.
+The `<md-sidemenu-content>` define the collapsible navigation element and theres some attributes to setup. The `md-icon` or `md-svg-icon` add an icon before the `md-heading` and the `md-arrow` add an arrow after the heading.
 
 The `<md-sidemenu-button>` add the buttons inside the navigation.
 
