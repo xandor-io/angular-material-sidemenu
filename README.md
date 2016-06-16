@@ -6,14 +6,14 @@ This is a package to create navigation menus using Angular Material. This follow
 
 ## Installation
 
-This package can be installed using npm and bower:
+This package can be installed using npm or bower:
 
 * `npm install angular-material-sidemenu`
 * `bower install angular-material-sidemenu`
 
 ## Usage
 
-Include the script and css files in you html and add `ngMaterialSidemenu` in you module. Also this module has support for browserify.
+Include the script and css files in you html and add `ngMaterialSidemenu` in you module. Also this module has support for browserify or wiredep.
 
 ```html
 <link rel="stylesheet" href="path/to/angular-material-sidemenu.css">
@@ -28,7 +28,7 @@ To use icons with ligatures you should include the reference for the Material Ic
 
 After that you can add the following markup:
 ```html
-<md-sidemenu locked="true">
+<md-sidemenu>
   <md-sidemenu-group>
     <md-subheader class="md-no-sticky">Caption</md-subheader>
 
@@ -49,13 +49,27 @@ After that you can add the following markup:
 </md-sidemenu>
 ```
 
-The `<md-sidemenu>` is the main directive to hold all navigation items.
+### Components
 
-The `<md-sidemenu-group>` is needed to create groups of content.
+* `<md-sidemenu>`
+Is the main directive to hold all navigation items.
 
-The `<md-sidemenu-content>` define the collapsible navigation element and theres some attributes to setup. The `md-icon` or `md-svg-icon` add an icon before the `md-heading` and the `md-arrow` add an arrow after the heading.
+* `<md-sidemenu-group>`
+Is needed to create groups of content.
 
-The `<md-sidemenu-button>` add the buttons inside the navigation.
+* `<md-sidemenu-content>`
+Define the collapsible navigation element and theres some attributes to setup. The following options are available:
+ - `md-icon` - You can use font icons
+ - `md-svg-icon` - To use external svg icons
+ - `md-heading` - The title of the section
+ - `md-arrow` - An optional boolean to show an indicator arrow
+
+* `<md-sidemenu-button>` 
+ Add the buttons inside the navigation. The following options are available:
+ - `href` - The href for the button
+ - `ui-sref` - The ui-router alternative
+ - `ui-sref-active` - The highlight class to use with ui-router
+ - `target` - The link target attribute
 
 Pretty easy!
 
