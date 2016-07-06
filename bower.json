@@ -3,6 +3,7 @@
   "name": "angular-material-sidemenu",
   "description": "A simple sidemenu for Angular Material",
   "version": "1.0.2",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcosmoura/angular-material-sidemenu.git"
@@ -21,7 +22,6 @@
     "dest/angular-material-sidemenu.js",
     "dest/angular-material-sidemenu.css"
   ],
-  "license": "MIT",
   "ignore": [
     "node_modules",
     "bower_components"
