@@ -61,8 +61,10 @@ Is needed to create groups of content.
 Define the collapsible navigation element and there's some attributes to setup. The following attributes are available:
  - `md-icon` - You can use font icons
  - `md-svg-icon` - To use external svg icons
+ - `md-font-icon` - To use custom md-font-icon
  - `md-heading` - The title of the section
  - `md-arrow` - An optional boolean to show an indicator arrow
+ - `md-svg-arrow` - To use external svg arrow (don't use md-arrow with this)
 
 * `<md-sidemenu-button>` 
  Add the buttons inside the navigation. The following attributes are available:
