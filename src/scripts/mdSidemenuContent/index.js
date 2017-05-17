@@ -1,5 +1,6 @@
 import controller from './controller';
 import template from './template';
+import link from './link';
 
 let directive = () => {
 
@@ -9,14 +10,16 @@ let directive = () => {
       heading: '@mdHeading',
       icon: '@?mdIcon',
       svgIcon: '@?mdSvgIcon',
-      arrow: '@?mdArrow'
+      arrow: '@?mdArrow',
+      onHover: '@onHover'
     },
     replace: true,
     transclude: true,
     template,
     controller,
     controllerAs: '$mdSidemenuContent',
-    bindToController: true
+    bindToController: true,
+    link
   };
 
 };
