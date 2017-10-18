@@ -10,7 +10,7 @@ This package can be installed using npm or bower:
 
 **Note:** Use version `1.0.5`
 
-* `npm install angular-material-sidemenu`
+* `npm install ng-material-sidemenu`
 * `bower install angular-material-sidemenu`
 
 ## Usage
