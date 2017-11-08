@@ -92,7 +92,6 @@ md-sidemenu-button {
 }
 
 .md-sidemenu-wrapper {
-  margin-top: -200vh;
   overflow: hidden;
   opacity: 0;
   transform: translate3D(0, 0, 0);
@@ -100,7 +99,7 @@ md-sidemenu-button {
   transition-property: transform, opacity, margin, background;
 
   &.md-active {
-    margin-top: 0;
+    margin-top: 0 !important;
     opacity: 1;
     transition-timing-function: cubic-bezier(.25, .8, .25, 1);
   }
