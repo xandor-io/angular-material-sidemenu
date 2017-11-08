@@ -2,7 +2,7 @@
   "projectName": "Angular Material Sidemenu",
   "name": "ng-material-sidemenu",
   "description": "A simple sidemenu for Angular Material",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "repository": {
     "type": "git",

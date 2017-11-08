@@ -8,7 +8,7 @@ This is a package to create navigation menus using Angular Material. This follow
 
 This package can be installed using npm or bower:
 
-**Note:** Use version `1.0.5`
+**Note:** Use version `1.0.6`
 
 * `npm install ng-material-sidemenu`
 * `bower install angular-material-sidemenu`
