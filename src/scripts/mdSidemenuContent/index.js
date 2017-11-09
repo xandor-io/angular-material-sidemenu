@@ -12,7 +12,8 @@ let directive = () => {
       svgIcon: '@?mdSvgIcon',
       arrow: '@?mdArrow',
       collapseOther: '@?collapseOther',
-      onHover: '@onHover'
+      onHover: '@onHover',
+      visible: '@visible'
     },
     replace: true,
     transclude: true,
