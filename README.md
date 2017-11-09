@@ -79,6 +79,7 @@ Define the collapsible navigation element and there's some attributes to setup. 
  - `md-svg-icon` - To use external svg icons
  - `md-heading` - The title of the section
  - `md-arrow` - An optional boolean to show an indicator arrow
+ - `visible` - An optional boolean to defined the initial menu status is opened or closed. Default is false
 
 
 * `<md-sidemenu-button>`
