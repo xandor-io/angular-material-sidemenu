@@ -47,6 +47,7 @@ md-sidemenu-button {
 .md-sidemenu-button {
   md-icon:first-child {
     max-width: 24px;
+    margin-left: 0;
     margin-right: 32px;
   }
 
@@ -80,6 +81,7 @@ md-sidemenu-button {
 
     &:first-child {
       max-width: 24px;
+      margin-left: 0;
       margin-right: 32px;
     }
   }
