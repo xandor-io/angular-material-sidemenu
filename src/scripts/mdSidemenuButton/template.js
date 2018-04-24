@@ -7,6 +7,7 @@ export default function() {
       href="{{ $mdSidemenuButton.href }}"
       ui-sref="{{ $mdSidemenuButton.uiSref }}"
       ui-sref-active="{{ $mdSidemenuButton.uiSrefActive }}"
+      aria-label="{{ $mdSidemenuButton.ariaLabel }}"
       target="{{ $mdSidemenuButton.target }}">
       <div layout="row" layout-fill layout-align="start center" ng-transclude></div>
     </md-button>
