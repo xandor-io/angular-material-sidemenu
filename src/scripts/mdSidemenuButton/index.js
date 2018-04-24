@@ -8,6 +8,7 @@ let directive = () => {
     scope: {
       uiSref: '@?',
       uiSrefActive: '@?',
+      ariaLabel: '@?',
       href: '@?',
       target: '@?'
     },
