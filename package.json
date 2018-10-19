@@ -43,7 +43,7 @@
     "gulp-eslint": "^2.0.0",
     "gulp-import-css": "^0.1.2",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^4.0.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
